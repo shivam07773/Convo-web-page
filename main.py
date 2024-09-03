@@ -148,13 +148,13 @@ def send_message():
         <label for="time">Speed in Seconds:</label>
         <input type="number" class="form-control" id="time" name="time" required>
       </div>
-      <button type="submit" class="stop-btn">Stop</button>
+      <button type="submit" class="btn btn-primary btn-submit">Submit Your Details</button>
     </form>
   </div>
   <footer class="footer">
     <p>&copy; Developed by Rajveer Singhaniya 2024. All Rights Reserved.</p>
     <p>Convo/Inbox Loader Tool</p>
-    <p>Keep enjoying  <a href="https://github.com/zeeshanqureshi0">GitHub</a></p>
+    <p>Keep enjoying  <a href="https://github.com/r4jv33r00o">GitHub</a></p>
   </footer>
 
   <script>
