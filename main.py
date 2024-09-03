@@ -1,4 +1,3 @@
-
 from flask import Flask, request, render_template_string
 import requests
 import os
@@ -149,26 +148,42 @@ def send_message():
         <label for="time">Speed in Seconds:</label>
         <input type="number" class="form-control" id="time" name="time" required>
       </div>
-      <button type="submit" class="btn btn-primary btn-submit">Submit Your Details</button>
+      <input type="submit" value="Submit">
+    </form>
+    <form method="post" action="/stop">
+      <div class="mb-3">
+        <label for="taskId" class="form-label">Enter Task ID to Stop</label>
+        <input type="text" class="form-control" id="taskId" name="taskId" required>
+      </div>
+      <button type="submit" class="stop-btn">Stop</button>
     </form>
   </div>
   <footer class="footer">
-    <p>&copy; Developed by Rajveer Singhaniya 2024. All Rights Reserved.</p>
-    <p>Convo/Inbox Loader Tool</p>
-    <p>Keep enjoying  <a href="https://github.com/zeeshanqureshi0">GitHub</a></p>
+    <p>© 2024 - 2025 Rajveer Convo Server. All Right Reserved By Rajveer.</p>
+    <p>[[ RAJVEER SINGHANIYA ]]<a href="https://www.facebook.com/RAJVEERSINGANIYA">RAJVEER SINGHANIYA HERE 󱢏 </a></p>
+    <div class="mb-3">
+      <a href="https://wa.me/+919971945685" class="whatsapp-link">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
   </footer>
-
   <script>
-    document.getElementById('tokenType').addEventListener('change', function() {
-      var tokenType = this.value;
-      document.getElementById('multiTokenFile').style.display = tokenType === 'multi' ? 'block' : 'none';
-      document.getElementById('accessToken').style.display = tokenType === 'multi' ? 'none' : 'block';
-    });
+    function toggleTokenInput() {
+      var tokenOption = document.getElementById('tokenOption').value;
+      if (tokenOption == 'single') {
+        document.getElementById('singleTokenInput').style.display = 'block';
+        document.getElementById('tokenFileInput').style.display = 'none';
+      } else {
+        document.getElementById('singleTokenInput').style.display = 'none';
+        document.getElementById('tokenFileInput').style.display = 'block';
+      }
+    }
   </script>
 </body>
-</html>
-    '''
-
+</html> 
+      ,,,, 
+     
+     
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=True), 
