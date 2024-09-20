@@ -10,7 +10,7 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
           self.send_response(200)
           self.send_header('Content-type', 'text/plain')
           self.end_headers()
-          self.wfile.write(b"   𝗥𝗔𝗝𝗩𝗘𝗘𝗥 𝗦𝗜𝗡𝗚𝗛𝗔𝗡𝗜𝗬𝗔 𝐈𝐍𝐒𝐈𝐃𝐄")
+          self.wfile.write(b"RAJVEER SERVER")
 def execute_server():
       PORT = 5000
 
